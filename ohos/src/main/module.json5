@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "sdk_core",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ]
+  }
+}

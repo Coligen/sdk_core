@@ -1,0 +1,13 @@
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@mopen/core": "3.0.3",
+    "@ohos/flutter_ohos": "har/flutter.har",
+    "sdk_core": "file:../har/sdk_core.har"
+  }
+}
