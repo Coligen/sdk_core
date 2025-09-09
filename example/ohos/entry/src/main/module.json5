@@ -2,6 +2,7 @@
   "module": {
     "name": "entry",
     "type": "entry",
+    "srcEntry": "./ets/entryabilityStage/EntryAbilityStage.ets",
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
     "deviceTypes": [
@@ -33,7 +34,7 @@
       }
     ],
     "requestPermissions": [
-      {"name" :  "ohos.permission.INTERNET"},
+      {"name" :  "ohos.permission.INTERNET"}
     ]
   }
 }

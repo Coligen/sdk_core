@@ -25,7 +25,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace = "mobile.open.plugin.sdk_core_example"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 35
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -36,20 +36,35 @@ android {
     defaultConfig {
         applicationId = "mobile.open.sdk.example"
         minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        targetSdk = 35
         versionCode = flutterVersionCode.toInteger()
         versionName = flutterVersionName
     }
 
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.debug
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('signature.keystore')
+            storePassword 'android'
         }
     }
 }
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation 'mobile.open.sdk:core:3.1.0.202506271141'
 }

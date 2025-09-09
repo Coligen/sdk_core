@@ -2,6 +2,14 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven {
+            allowInsecureProtocol true
+            url 'http://120.25.162.154:9981/repository/sdk-public'
+            credentials {
+                username 'mobilesdk'
+                password 'sdk2024@mobile.open'
+            }
+        }
     }
 }
 

@@ -9,7 +9,14 @@ class MockSdkCorePlatform
     implements SdkCorePlatform {
 
   @override
-  Future<String?> getPlatformVersion() => Future.value('42');
+  Future<void> init(String appId, String appKey) {
+    return Future.value();
+  }
+
+  @override
+  Future<void> initializeOnUserProtocolAgreed() {
+    return Future.value();
+  }
 }
 
 void main() {
@@ -23,7 +30,5 @@ void main() {
     SdkCore sdkCorePlugin = SdkCore();
     MockSdkCorePlatform fakePlatform = MockSdkCorePlatform();
     SdkCorePlatform.instance = fakePlatform;
-
-    expect(await sdkCorePlugin.getPlatformVersion(), '42');
   });
 }

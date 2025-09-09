@@ -6,13 +6,13 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   MethodChannelSdkCore platform = MethodChannelSdkCore();
-  const MethodChannel channel = MethodChannel('sdk_core');
+  const MethodChannel channel = MethodChannel('mobile.open.sdk/core');
 
   setUp(() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(
       channel,
       (MethodCall methodCall) async {
-        return '42';
+        return Future.value();
       },
     );
   });
@@ -21,7 +21,7 @@ void main() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null);
   });
 
-  test('getPlatformVersion', () async {
-    expect(await platform.getPlatformVersion(), '42');
+  test('init', () async {
+    await platform.init("", "");
   });
 }
