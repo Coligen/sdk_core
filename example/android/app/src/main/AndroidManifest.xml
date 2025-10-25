@@ -32,13 +32,6 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-
-        <meta-data
-            android:name="mobile.open.APP_ID"
-            android:value="2025101382" />
-        <meta-data
-            android:name="mobile.open.APP_KEY"
-            android:value="2e6acb4a8eb658c83c540155a0feae73e43374d4752fe21f65f051cd96968e59" />
     </application>
 
     <queries>

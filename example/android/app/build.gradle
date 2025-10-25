@@ -66,5 +66,4 @@ flutter {
 }
 
 dependencies {
-    implementation 'mobile.open.sdk:core:3.1.0.202506271141'
 }
