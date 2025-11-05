@@ -7,6 +7,6 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@ohos/flutter_ohos": "har/flutter.har",
-    "@mopen/core": "3.0.3"
+    "@mopen/core": "3.1.0"
   }
 }
