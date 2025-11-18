@@ -20,10 +20,5 @@ dev_dependencies:
 flutter:
   plugin:
     platforms:
-      android:
-        package: mobile.open.plugin.sdk_core
-        pluginClass: SdkCorePlugin
       ohos:
-        pluginClass: SdkCorePlugin
-      ios:
         pluginClass: SdkCorePlugin
